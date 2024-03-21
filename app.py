@@ -12,7 +12,7 @@ def fetch_poster(movie_id):
 def recommend(movie):
     movie_index = movies[movies["title"] == movie].index[0]
     distances = similarity[movie_index]
-    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:10]
+    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[1:9]
 
     recomended_movie = []
     recomended_posters = []
@@ -47,8 +47,8 @@ selected_movie_name = st.selectbox(
 
 if st.button('Recommend'):
     names,posters = recommend(selected_movie_name)
-    col1, col2, col3, col4, col5 = st.columns(5)
-    col6, col7, col8, col9, co20 = st.columns(5)
+    col1, col2, col3,  = st.columns(3)
+    col4, col5, col6  = st.columns(3)
 
     with col1:
         st.image(posters[0])
@@ -74,20 +74,20 @@ if st.button('Recommend'):
         st.image(posters[5])
         st.text(names[5])
 
-    with co17:
-        st.image(posters[6])
-        st.text(names[6])
+    # with co17:
+    #     st.image(posters[6])
+    #     st.text(names[6])
 
-    with col8:
-        st.image(posters[7])
-        st.text(names[7])
+    # with col8:
+    #     st.image(posters[7])
+    #     st.text(names[7])
 
-    with col9:
-        st.image(posters[8])
-        st.text(names[8])
+    # with col9:
+    #     st.image(posters[8])
+    #     st.text(names[8])
 
-    with co20:
-        st.image(posters[9])
-        st.text(names[9])
+    # with co20:
+    #     st.image(posters[9])
+    #     st.text(names[9])
         
 
