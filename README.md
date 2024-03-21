@@ -6,5 +6,7 @@
 #### --Numpy
 #### --Pandas
 #### --Sklearn
+#### --CountVectorizer
+#### --Cosine_similarity
 #### --Pickle
 #### --PorterStemmer
