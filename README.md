@@ -8,5 +8,6 @@
 #### --Sklearn
 #### --Vectorization
 #### --Cosine_similarity
-#### --Pickle
 #### --PorterStemmer
+#### --Pickle
+
